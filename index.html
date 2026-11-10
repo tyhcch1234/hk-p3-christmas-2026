@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-HK">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>小三聖誕放電指南 2026｜香港聖誕假期親子活動全集</title>
+<meta name="description" content="2026年12月19日至2027年1月3日，全港18區適合小三（約8–9歲）學生的聖誕假期活動：主題樂園、冬日小鎮、工展會、博物館、戶外自然、免費好去處，附官方連結與親子貼士。">
+<style>
+:root{
+  --pine:#0b3d2e;
+  --green:#0e4a37; --green-soft:#1b6b50;
+  --gold:#c9a227; --gold-soft:#e8c766;
+  --cream:#fbf7ef; --paper:#fffdf8;
+  --ink:#1c2321; --muted:#5f6b66;
+  --line:#e3ddd0;
+  --red:#a8342a;
+  --radius:16px;
+  --shadow:0 1px 2px rgba(11,61,46,.06), 0 8px 24px rgba(11,61,46,.07);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--cream); color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang HK","Noto Sans TC","Microsoft JhengHei",sans-serif;
+  line-height:1.65; -webkit-font-smoothing:antialiased;
+}
+a{color:var(--green-soft); text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:1160px; margin:0 auto; padding:0 20px}
+
+/* ---------- hero ---------- */
+header.hero{
+  background:
+    radial-gradient(1200px 420px at 12% -10%, rgba(201,162,39,.28), transparent 60%),
+    radial-gradient(900px 380px at 88% 0%, rgba(27,107,80,.55), transparent 55%),
+    linear-gradient(165deg,#0b3d2e 0%,#0e4a37 55%,#0a3527 100%);
+  color:#f4efe2; padding:46px 0 34px; position:relative; overflow:hidden;
+}
+header.hero::after{
+  content:""; position:absolute; inset:0; pointer-events:none;
+  background-image:radial-gradient(rgba(255,255,255,.14) 1px, transparent 1px);
+  background-size:22px 22px; opacity:.35; mask-image:linear-gradient(to bottom,rgba(0,0,0,.9),transparent 75%);
+}
+.eyebrow{font-size:13px; letter-spacing:.22em; text-transform:uppercase; color:var(--gold-soft); margin:0 0 10px}
+h1{font-size:clamp(28px,5vw,44px); line-height:1.2; margin:0 0 12px; letter-spacing:.01em}
+h1 em{font-style:normal; color:var(--gold-soft)}
+.lede{max-width:62ch; color:#d8dfd9; margin:0 0 22px; font-size:15.5px}
+.hero-meta{display:flex; flex-wrap:wrap; gap:10px 22px; font-size:14px; color:#cfd9d2}
+.hero-meta b{color:#fff; font-weight:600}
+.countdown{
+  display:inline-flex; align-items:center; gap:10px; margin-top:20px;
+  background:rgba(255,255,255,.09); border:1px solid rgba(255,255,255,.18);
+  padding:9px 16px; border-radius:999px; font-size:14px; backdrop-filter:blur(4px);
+}
+.countdown b{font-variant-numeric:tabular-nums; color:var(--gold-soft); font-size:16px}
+
+/* ---------- stats ---------- */
+.stats{display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin:-26px 0 0; position:relative; z-index:2}
+.stat{background:var(--paper); border:1px solid var(--line); border-radius:14px; padding:14px 16px; box-shadow:var(--shadow)}
+.stat .n{font-size:24px; font-weight:700; color:var(--green); font-variant-numeric:tabular-nums}
+.stat .l{font-size:12.5px; color:var(--muted)}
+
+/* ---------- controls ---------- */
+.controls{
+  position:sticky; top:0; z-index:30; background:rgba(251,247,239,.92);
+  backdrop-filter:blur(10px); border-bottom:1px solid var(--line); padding:12px 0; margin-top:26px;
+}
+.row{display:flex; gap:8px; flex-wrap:wrap; align-items:center}
+.chip{
+  border:1px solid var(--line); background:var(--paper); color:var(--ink);
+  padding:7px 14px; border-radius:999px; font-size:13.5px; cursor:pointer; white-space:nowrap;
+  transition:.15s; font-family:inherit;
+}
+.chip:hover{border-color:var(--green-soft); color:var(--green)}
+.chip[aria-pressed="true"]{background:var(--green); border-color:var(--green); color:#fff}
+.chip .c{opacity:.55; font-size:12px; margin-left:5px}
+.search{flex:1 1 220px; min-width:180px; display:flex; align-items:center; gap:8px;
+  background:var(--paper); border:1px solid var(--line); border-radius:999px; padding:7px 14px}
+.search input{border:0; outline:0; background:transparent; font-size:14px; width:100%; font-family:inherit; color:var(--ink)}
+select{font-family:inherit; font-size:13.5px; padding:7px 12px; border-radius:999px;
+  border:1px solid var(--line); background:var(--paper); color:var(--ink)}
+.result-line{font-size:13px; color:var(--muted); margin:10px 0 0}
+
+/* ---------- cards ---------- */
+.grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(310px,1fr)); gap:16px; margin:20px 0 10px}
+.card{
+  background:var(--paper); border:1px solid var(--line); border-radius:var(--radius);
+  padding:18px 18px 16px; box-shadow:var(--shadow); display:flex; flex-direction:column; gap:9px;
+  position:relative; transition:.18s; overflow:hidden;
+}
+.card::before{content:""; position:absolute; left:0; top:0; bottom:0; width:4px; background:var(--c,var(--green))}
+.card:hover{transform:translateY(-2px); box-shadow:0 10px 30px rgba(11,61,46,.11)}
+.card .top{display:flex; justify-content:space-between; gap:8px; align-items:flex-start}
+.card h3{margin:0; font-size:16.5px; line-height:1.4; letter-spacing:.01em}
+.badge{font-size:11px; padding:3px 8px; border-radius:6px; white-space:nowrap; font-weight:600; letter-spacing:.02em; flex:none}
+.b-confirm{background:#e3f2ea; color:#14654a}
+.b-annual{background:#fdf1d8; color:#8a6414}
+.b-year{background:#eef1f0; color:#4d5a55}
+.b-free{background:#eef0ff; color:#3b3f8f}
+.meta{font-size:12.8px; color:var(--muted); display:flex; flex-wrap:wrap; gap:4px 14px; align-items:center}
+.meta span{display:inline-flex; align-items:center}
+.meta span:first-child::after{content:"·"; margin-left:12px; color:#c9c3b4}
+.meta .fee{font-weight:600; background:#f3f0e5; padding:1px 9px; border-radius:999px; font-size:12px; letter-spacing:.02em}
+.meta .f{color:#14654a; background:#e7f3ec}
+.meta .p{color:#8a6414; background:#fbf1dc}
+.tip{font-size:13.5px; color:#37423d; margin:0; flex:1}
+.tags{display:flex; flex-wrap:wrap; gap:6px}
+.tag{font-size:11.5px; background:#f1efe6; color:#5c635a; padding:2px 8px; border-radius:5px}
+.card .foot{display:flex; justify-content:space-between; align-items:center; border-top:1px dashed var(--line); padding-top:10px; margin-top:2px}
+.jump{font-size:13px; font-weight:600}
+.star{background:none; border:0; cursor:pointer; font-size:16px; color:#c7c2b3; padding:2px 4px; line-height:1}
+.star[aria-pressed="true"]{color:var(--gold)}
+
+/* ---------- sections ---------- */
+section.block{margin:44px 0}
+h2{font-size:clamp(20px,3vw,26px); margin:0 0 6px; color:var(--green); letter-spacing:.01em}
+h2 .sub{display:block; font-size:14px; font-weight:400; color:var(--muted); margin-top:4px}
+.route-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px; margin-top:18px}
+.route{background:var(--paper); border:1px solid var(--line); border-radius:var(--radius); padding:18px; box-shadow:var(--shadow)}
+.route h3{margin:0 0 4px; font-size:15.5px; color:var(--green)}
+.route .when{font-size:12.5px; color:var(--gold); font-weight:600; letter-spacing:.04em; margin-bottom:8px}
+.route ol{margin:0; padding-left:18px; font-size:13.5px; color:#3b453f}
+.route li{margin-bottom:5px}
+.notes{background:var(--paper); border:1px solid var(--line); border-radius:var(--radius); padding:20px 22px; margin-top:18px}
+.notes ul{margin:0; padding-left:20px; font-size:14px; color:#3b453f}
+.notes li{margin-bottom:8px}
+.calendar{display:grid; grid-template-columns:repeat(7,1fr); gap:6px; max-width:640px; margin:16px 0 0; font-size:12px; text-align:center}
+.calendar .dow{color:var(--muted); font-weight:600; padding-bottom:4px}
+.calendar .d{background:var(--paper); border:1px solid var(--line); border-radius:8px; padding:7px 0; position:relative}
+.calendar .d.hol{background:#0e4a37; color:#fff; border-color:#0e4a37; font-weight:700}
+.calendar .d.peak{background:#fdf1d8; border-color:#e8d6a8; color:#8a6414; font-weight:600}
+.calendar .d span{display:block; font-size:9.5px; opacity:.8}
+
+/* ---------- footer ---------- */
+footer{background:#0b3d2e; color:#cfd9d2; padding:34px 0 40px; margin-top:52px; font-size:13.5px}
+footer h4{color:#fff; margin:0 0 8px; font-size:14px; letter-spacing:.06em}
+footer ul{margin:0 0 18px; padding-left:18px}
+footer li{margin-bottom:5px}
+footer a{color:var(--gold-soft)}
+.disclaim{color:#9fb0a7; font-size:12.5px; border-top:1px solid rgba(255,255,255,.12); padding-top:16px}
+
+@media (max-width:720px){
+  .stats{grid-template-columns:repeat(2,1fr)}
+  header.hero{padding:34px 0 28px}
+  .controls{padding:10px 0}
+  .grid{grid-template-columns:1fr}
+}
+@media print{
+  .controls,.star,header.hero::after{display:none}
+  body{background:#fff}
+  .card{break-inside:avoid; box-shadow:none}
+  header.hero{background:#0b3d2e !important; -webkit-print-color-adjust:exact; print-color-adjust:exact}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Hong Kong · Christmas 2026</p>
+    <h1>小三聖誕<em>放電</em>指南</h1>
+    <p class="lede">2026 年聖誕假期，把 18 區好用的小三（約 8–9 歲）活動整理成一頁。每個項目都標明日期與資料狀態：<b>綠色＝官方已公布 2026 場次</b>，<b>黃色＝每年慣例、細節待公布</b>。點「★」可存成你自己的行程，右上角可一鍵列印。</p>
+    <div class="hero-meta">
+      <div>假期範圍 <b>2026.12.19 – 2027.01.03</b></div>
+      <div>對象 <b>小學三年級（8–9 歲）</b></div>
+      <div>資料更新 <b>2026.11.10</b></div>
+    </div>
+    <div class="countdown">距聖誕節 <b id="cd">—</b> 天</div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="stats">
+    <div class="stat"><div class="n" id="s-all">—</div><div class="l">個活動／地點</div></div>
+    <div class="stat"><div class="n" id="s-conf">—</div><div class="l">已確認 2026 日期</div></div>
+    <div class="stat"><div class="n" id="s-free">—</div><div class="l">完全免費</div></div>
+    <div class="stat"><div class="n" id="s-indoor">—</div><div class="l">落雨／凍天備案</div></div>
+  </div>
+</div>
+
+<div class="controls">
+  <div class="wrap">
+    <div class="row" id="cats"></div>
+    <div class="row" style="margin-top:8px">
+      <label class="search">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#8a938d" stroke-width="2.2" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg>
+        <input id="q" type="search" placeholder="搜尋名稱、地區或關鍵字，例如「恐龍」「沙田」「免費」">
+      </label>
+      <select id="dist"><option value="">全部 18 區</option></select>
+      <select id="fee">
+        <option value="">費用不限</option>
+        <option value="free">免費</option>
+        <option value="paid">收費</option>
+      </select>
+      <button class="chip" id="starred" aria-pressed="false">★ 只看我選的</button>
+      <button class="chip" id="reset">重設</button>
+    </div>
+    <div class="result-line" id="count">載入中…</div>
+  </div>
+</div>
+
+<main class="wrap">
+  <div class="grid" id="grid"></div>
+
+  <section class="block">
+    <h2>假期日曆：哪些日子要記住<span class="sub">公眾假期與人流高峰一眼看清，紅色＝公眾假期，黃色＝預計最擠</span></h2>
+    <div class="calendar" id="cal"></div>
+    <p style="font-size:12.5px;color:var(--muted);margin:12px 0 0">深綠＝公眾假期　米黃＝預計最多人（學校假期＋週末）　其餘為平日，最適合安排熱門活動。</p>
+  </section>
+
+  <section class="block">
+    <h2>四條現成路線<span class="sub">按「放電 / 學習 / 免費 / 落雨」四種心情排好，直接照抄</span></h2>
+    <div class="route-grid">
+      <div class="route">
+        <div class="when">路線 A ・ 全日放電</div>
+        <h3>主題樂園＋夜賞燈飾</h3>
+        <ol>
+          <li>早上入海洋公園「玩轉冬日園」（12/12 起）</li>
+          <li>黃昏離開，乘南港島線到金鐘轉中環</li>
+          <li>皇后像廣場「冬日小鎮」看 20 米聖誕樹、光影匯</li>
+          <li>沿遮打道星光長廊散步收工</li>
+        </ol>
+      </div>
+      <div class="route">
+        <div class="when">路線 B ・ 免費一日</div>
+        <h3>博物館＋海濱散步</h3>
+        <ol>
+          <li>上午香港科學館（逢星期四休館）</li>
+          <li>步行至香港歷史博物館看常設展</li>
+          <li>星光大道海濱看維港，順道看尖沙咀冬日小鎮</li>
+          <li>天星小輪過海，中環落船完結</li>
+        </ol>
+      </div>
+      <div class="route">
+        <div class="when">路線 C ・ 大自然</div>
+        <h3>紅葉＋水塘輕行</h3>
+        <ol>
+          <li>元朗大棠楓香林（12 月中至 1 月最紅）</li>
+          <li>沿大棠山道慢行，來回約 2 小時，適合小三腳骨力</li>
+          <li>回元朗市中心吃午飯</li>
+          <li>有餘力加遊天水圍濕地公園（逢星期二休）</li>
+        </ol>
+      </div>
+      <div class="route">
+        <div class="when">路線 D ・ 落雨備案</div>
+        <h3>室內三連環</h3>
+        <ol>
+          <li>尖沙咀：科學館或太空館天象廳</li>
+          <li>西九：M+ 或故宮文化博物館（室內為主）</li>
+          <li>傍晚商場聖誕裝置打卡，順便吃晚飯</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>帶小三去玩，實用五件事<span class="sub">都是每年聖誕實戰會踩到的坑</span></h2>
+    <div class="notes">
+      <ul>
+        <li><b>先訂票，後排期。</b>主題樂園、工展會、充氣嘉年華、冬日美食節在 12/24–12/28 及週末最滿，網上預購通常比現場便宜，亦避免即場排隊。</li>
+        <li><b>公眾假期＝人流高峰。</b>2026 年的 12/25（五）、12/26（六）、2027/1/1（五）三日最擠；同一活動改在 12/21–12/23 或 12/29–12/30 的平日去，體驗差很遠。</li>
+        <li><b>博物館有休館日。</b>例如香港科學館逢星期四休館（公眾假期除外）。出發前一定開官網確認，聖誕及元旦期間亦可能有特別開放時間。</li>
+        <li><b>室內外各排一半。</b>12 月香港可以 12°C 也可以 25°C，加上有可能下雨；每天預留一個室內備案，行程不會被打亂。</li>
+        <li><b>讓孩子做「研究員」。</b>小三正好在做專題研習與遊記寫作：出發前請他選 3 個想知的問題，現場拍照記錄，回家寫成 5 句觀察，玩樂同時交到功課。</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <h4>資料來源</h4>
+    <ul>
+      <li>香港旅遊發展局「香港繽紛冬日巡禮 2026」官方頁及節日盛事資料庫</li>
+      <li>香港迪士尼樂園、香港海洋公園、昂坪360 官方網站</li>
+      <li>香港中華廠商聯合會（工展會）、香港會議展覽中心（冬日美食節）主辦方公布</li>
+      <li>康樂及文化事務署博物館及圖書館、香港濕地公園、嘉道理農場等官方網站</li>
+    </ul>
+    <p class="disclaim">
+      本頁為非官方整理，方便家長規劃，與上述機構並無合作關係。所有日期、票價、開放時間與活動內容均可能更改，出發前請以主辦單位官方公布為準。<br>
+      已確認項目以官方 2026 場次為依據；標示「每年慣例」者為往年同期舉辦、2026 細節尚未公布，只可作參考。<br>
+      整理日期：2026 年 11 月 10 日。
+    </p>
+  </div>
+</footer>
+
+<script>
+/* ================= render ================= */
+function boot(){
+const $ = s => document.querySelector(s);
+const SKEY = 'xmas26-stars';
+let stars = new Set(JSON.parse(localStorage.getItem(SKEY) || '[]'));
+localStorage.setItem(SKEY, JSON.stringify([...stars]));
+
+const state = {cat:'', dist:'', fee:'', q:'', starOnly:false};
+
+/* category chips */
+const catBox = $('#cats');
+const allChip = document.createElement('button');
+allChip.className='chip'; allChip.dataset.cat=''; allChip.setAttribute('aria-pressed','true');
+allChip.innerHTML = '全部<span class="c">'+D.length+'</span>';
+catBox.appendChild(allChip);
+CATS.forEach(c=>{
+  const n = D.filter(x=>x.cat===c.k).length;
+  const b=document.createElement('button');
+  b.className='chip'; b.dataset.cat=c.k; b.setAttribute('aria-pressed','false');
+  b.innerHTML = c.n+'<span class="c">'+n+'</span>';
+  catBox.appendChild(b);
+});
+catBox.addEventListener('click', e=>{
+  const b=e.target.closest('.chip'); if(!b) return;
+  state.cat=b.dataset.cat;
+  [...catBox.children].forEach(x=>x.setAttribute('aria-pressed', String(x===b)));
+  render();
+});
+
+/* district select */
+const dists=[...new Set(D.map(x=>x.dist.split('（')[0]))].sort((a,b)=>a.localeCompare(b,'zh-Hant'));
+dists.forEach(d=>{ const o=document.createElement('option'); o.value=d; o.textContent=d; $('#dist').appendChild(o); });
+
+/* control listeners */
+$('#q').addEventListener('input', e=>{ state.q=e.target.value.trim().toLowerCase(); render(); });
+$('#dist').addEventListener('change', e=>{ state.dist=e.target.value; render(); });
+$('#fee').addEventListener('change', e=>{ state.fee=e.target.value; render(); });
+$('#starred').addEventListener('click', e=>{
+  state.starOnly=!state.starOnly;
+  e.currentTarget.setAttribute('aria-pressed', String(state.starOnly));
+  render();
+});
+$('#reset').addEventListener('click', ()=>{
+  state.cat=''; state.dist=''; state.fee=''; state.q=''; state.starOnly=false;
+  $('#q').value=''; $('#dist').value=''; $('#fee').value='';
+  $('#starred').setAttribute('aria-pressed','false');
+  [...catBox.children].forEach((x,i)=>x.setAttribute('aria-pressed', String(i===0)));
+  render();
+});
+
+function match(x){
+  if(state.cat && x.cat!==state.cat) return false;
+  if(state.dist && !x.dist.startsWith(state.dist)) return false;
+  if(state.fee==='free' && x.fee!=='free') return false;
+  if(state.fee==='paid' && x.fee!=='paid') return false;
+  if(state.starOnly && !stars.has(x.n)) return false;
+  if(state.q){
+    const hay=(x.n+' '+x.dist+' '+x.when+' '+x.tip+' '+x.tags.join(' ')).toLowerCase();
+    if(!hay.includes(state.q)) return false;
+  }
+  return true;
+}
+
+function esc(s){return s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+
+function card(x){
+  const cat = CATS.find(c=>c.k===x.cat) || {c:'#0e4a37'};
+  const badge = x.st==='confirm'
+    ? '<span class="badge b-confirm">已確認 2026</span>'
+    : x.st==='annual'
+      ? '<span class="badge b-annual">每年慣例・待公布</span>'
+      : '<span class="badge b-year">全年開放</span>';
+  const link = x.url
+    ? '<a class="jump" href="'+x.url+'" target="_blank" rel="noopener">官方網站 ↗</a>'
+    : '<a class="jump" href="https://www.google.com/maps/search/?api=1&query='+encodeURIComponent((x.map||x.n)+' 香港')+'" target="_blank" rel="noopener">地圖位置 ↗</a>';
+  const on = stars.has(x.n);
+  return '<article class="card" style="--c:'+cat.c+'">'
+    + '<div class="top"><h3>'+esc(x.n)+'</h3>'+badge+'</div>'
+    + '<div class="meta"><span>'+esc(x.dist)+'</span><span>'+esc(x.when)+'</span><span class="fee '+(x.fee==='free'?'f':'p')+'">'+(x.fee==='free'?'免費':'收費')+'</span></div>'
+    + '<p class="tip">'+esc(x.tip)+'</p>'
+    + '<div class="tags">'+x.tags.map(t=>'<span class="tag">#'+esc(t)+'</span>').join('')+'</div>'
+    + '<div class="foot">'+link
+    + '<button class="star" aria-pressed="'+on+'" aria-label="加入我的行程" data-n="'+esc(x.n)+'">'+(on?'★':'☆')+'</button>'
+    + '</div></article>';
+}
+
+function render(){
+  const list = D.filter(match);
+  $('#grid').innerHTML = list.length ? list.map(card).join('')
+    : '<p style="color:var(--muted);padding:30px 0">沒有符合條件的活動，試試清除篩選。</p>';
+  $('#count').textContent = '顯示 '+list.length+' / '+D.length+' 個活動'
+    + (state.starOnly ? '（只看已選 '+stars.size+' 個）' : '');
+  const free = list.filter(x=>x.fee==='free').length;
+  const conf = list.filter(x=>x.st==='confirm').length;
+  $('#count').textContent += '　·　免費 '+free+'　·　已確認日期 '+conf;
+}
+
+$('#grid').addEventListener('click', e=>{
+  const b=e.target.closest('.star'); if(!b) return;
+  const n=b.dataset.n;
+  stars.has(n) ? stars.delete(n) : stars.add(n);
+  localStorage.setItem(SKEY, JSON.stringify([...stars]));
+  b.setAttribute('aria-pressed', String(stars.has(n)));
+  b.textContent = stars.has(n) ? '★' : '☆';
+});
+
+render();
+
+/* stats */
+$('#s-all').textContent = D.length;
+$('#s-conf').textContent = D.filter(x=>x.st==='confirm').length;
+$('#s-free').textContent = D.filter(x=>x.fee==='free').length;
+$('#s-indoor').textContent = D.filter(x=>x.in!=='out').length;
+
+/* countdown */
+(function(){
+  const now=new Date();
+  const t=new Date('2026-12-25T00:00:00+08:00');
+  const d=Math.ceil((t-now)/86400000);
+  $('#cd').textContent = d>0 ? d : 0;
+})();
+
+/* 16-day strip: 2026-12-19 → 2027-01-03 */
+(function(){
+  const days=['日','一','二','三','四','五','六'];
+  const hol=new Set(['2026-12-25','2026-12-26','2027-01-01']);
+  const peak=new Set(['2026-12-24','2026-12-27','2026-12-28','2026-12-31','2027-01-02','2027-01-03']);
+  let html='';
+  for(let i=0;i<7;i++) html+='<div class="dow">'+days[i]+'</div>';
+  const start=Date.UTC(2026,11,19,12,0,0);
+  for(let i=0;i<new Date(start).getUTCDay();i++) html+='<div></div>';
+  for(let i=0;i<16;i++){
+    const dt=new Date(start+i*86400000);
+    const y=dt.getUTCFullYear(), m=String(dt.getUTCMonth()+1).padStart(2,'0'), d=String(dt.getUTCDate()).padStart(2,'0');
+    const key=y+'-'+m+'-'+d;
+    const cls = hol.has(key) ? 'd hol' : peak.has(key) ? 'd peak' : 'd';
+    const label = hol.has(key) ? '<span>假期</span>' : peak.has(key) ? '<span>高峰</span>' : '<span>&nbsp;</span>';
+    html += '<div class="'+cls+'">'+(Number(d)===1 ? '1/1' : Number(d)) + label + '</div>';
+  }
+  $('#cal').innerHTML = html;
+})();
+}
+</script>
+
+<script>
+/* ================= data ================= */
+const CATS = [
+  {k:'fest',  n:'大型節慶',   c:'#a8342a'},
+  {k:'park',  n:'樂園景點',   c:'#0e4a37'},
+  {k:'museum',n:'博物館',     c:'#2f5d8a'},
+  {k:'indoor',n:'室內放電',   c:'#6b4c8a'},
+  {k:'nature',n:'戶外自然',   c:'#3f7d3a'},
+  {k:'free',  n:'免費社區',   c:'#c9a227'}
+];
+
+const D = [
+/* ---- 大型節慶 ---- */
+{n:'冬日小鎮．中環（香港繽紛冬日巡禮）',cat:'fest',dist:'中西區',when:'2026-11-18 至 2027-01-05',fee:'free',st:'confirm',in:'both',
+ tip:'皇后像廣場 20 米聖誕樹、光影匯、聖誕市集與工作坊；黃昏後燈光最靚，平日晚上人較少。',tags:['免費','打卡','市集'],
+ url:'https://www.discoverhongkong.com/tc/events/hong-kong-winterfest/winter-wonderland-in-central.html'},
+{n:'冬日小鎮．尖沙咀（保誠保險）',cat:'fest',dist:'油尖旺',when:'2026-11-18 至 2027-01-05',fee:'free',st:'confirm',in:'both',
+ tip:'尖沙咀海濱全新冬日會場，燈光裝置加沉浸式投影，配維港夜景一起看。',tags:['免費','打卡','海濱'],
+ url:'https://www.discoverhongkong.com/tc/events/hong-kong-winterfest/winter-wonderland-in-tsim-sha-tsui.html'},
+{n:'冬日小鎮．銅鑼灣（利園區）',cat:'fest',dist:'灣仔',when:'2026-11-25 至 2027-01-03',fee:'free',st:'confirm',in:'both',
+ tip:'整個利園區變聖誕村：夜間巡遊、特色市集、創意節慶工作坊，適合傍晚散步。',tags:['免費','巡遊','市集'],
+ url:'https://www.discoverhongkong.com/tc/events/hong-kong-winterfest/winter-wonderland-in-causeway-bay.html'},
+{n:'香港跨年倒數',cat:'fest',dist:'全港（維港）',when:'2026-12-31',fee:'free',st:'confirm',in:'out',
+ tip:'維港煙花匯演＋現場表演。人多擠迫，建議 8 點前到海濱，或留家看直播更舒服。',tags:['免費','煙花','夜間'],
+ url:'https://www.discoverhongkong.com/tc/what-s-new/events/hong-kong-winterfest.html'},
+{n:'A Disney Christmas（香港迪士尼）',cat:'fest',dist:'離島（大嶼山）',when:'2026-11-17 至 2027-01-03',fee:'paid',st:'confirm',in:'both',
+ tip:'魔雪奇緣世界首個冬日市集與飄雪、城堡日間表演、聖誕樹亮燈禮；早入園玩到夜。',tags:['主題樂園','飄雪','表演'],
+ url:'https://www.hongkongdisneyland.com/zh-hk/hkdl/disney-christmas-intl/'},
+{n:'玩轉冬日園（香港海洋公園）',cat:'fest',dist:'南區',when:'2026-12-12 至 2027-01-10',fee:'paid',st:'confirm',in:'both',
+ tip:'Bulu Boo 聖誕樹、節日小火車、聖誕老人與精靈、現場頌歌；熊貓館仍是小三最愛。',tags:['主題樂園','動物','聖誕老人'],
+ url:'https://www.oceanpark.com.hk/tc'},
+{n:'第 60 屆工展會',cat:'fest',dist:'灣仔（維園）',when:'2026-12-12 至 2027-01-04',fee:'paid',st:'confirm',in:'out',
+ tip:'維園 24 天展期，11:00–21:00（1 月 4 日至 20:00）。買零食手信，讓小朋友自己比較價錢做功課。',tags:['市集','購物','維園'],
+ url:'https://www.hkbpe.com.hk/'},
+{n:'「香港地」巨型充氣嘉年華',cat:'fest',dist:'油尖旺（西九）',when:'2026-12-18 至 2027-01-03',fee:'paid',st:'confirm',in:'out',
+ tip:'西九藝術公園 10 萬平方呎，三大彈跳區（香港美食、交通、包山文化）＋懷舊攤位遊戲；09:15–23:00 分時段入場，先買票選時段。',tags:['彈跳','放電','西九'],
+ url:'https://www.facebook.com/hongkongbouncefest'},
+{n:'第 24 屆香港冬日美食節',cat:'fest',dist:'灣仔（會展 3 號館）',when:'2026-12-24 至 12-28',fee:'paid',st:'confirm',in:'in',
+ tip:'六大美食專區、過千攤位，全室內，落雨最穩陣的節目；下午人流最密，開場即去。',tags:['美食','室內','聖誕正日'],
+ url:'https://www.facebook.com/hongkongfoodfestival'},
+{n:'昂坪360 × 黑白®港味聖誕之旅',cat:'fest',dist:'離島（大嶼山）',when:'2026-11-03 至 2027-01-10',fee:'paid',st:'confirm',in:'both',
+ tip:'纜車上看機場與海，山上有市集與懷舊港味布置；可順道看天壇大佛。',tags:['纜車','市集','大嶼山'],
+ url:'https://www.np360.com.hk/featured-event/ngong-ping-360-x-black-white'},
+{n:'聖誕報佳音獻唱（中環一帶）',cat:'fest',dist:'中西區',when:'12 月（場次待公布）',fee:'free',st:'annual',in:'out',
+ tip:'團體在中環街頭獻唱聖詩，免費駐足聽；每年場次與位置不同，12 月初留意旅發局公布。',tags:['免費','音樂','街頭'],
+ url:'https://www.discoverhongkong.com/tc/what-s-new/events/hong-kong-winterfest.html'},
+{n:'AIA 友邦嘉年華',cat:'fest',dist:'中西區（中環海濱）',when:'往年 12 月中至 2 月；2026-27 日期待公布',fee:'paid',st:'annual',in:'out',
+ tip:'攤位遊戲、機動遊戲、雜技表演。2026-27 場次未公布，往年 12 月下旬開鑼，11 月下旬再查。',tags:['嘉年華','攤位遊戲'],
+ url:'https://www.zicket.co/events/aia-carnival-standard-1963827215065'},
+
+/* ---- 樂園景點 ---- */
+{n:'山頂纜車．凌霄閣',cat:'park',dist:'中西區',when:'全年',fee:'paid',st:'year',in:'both',
+ tip:'纜車斜度對小三已夠刺激；山頂環迴步行徑約 1 小時，看維港兩岸。',tags:['纜車','觀景','行山'],
+ map:'山頂纜車'},
+{n:'香港摩天輪（中環海濱）',cat:'park',dist:'中西區',when:'全年',fee:'paid',st:'year',in:'out',
+ tip:'一圈約 15 分鐘，可與中環冬日小鎮排同一晚；黃昏時段最靚。',tags:['摩天輪','海濱'],
+ map:'香港摩天輪'},
+{n:'天星小輪（中環–尖沙咀）',cat:'park',dist:'中西區',when:'全年',fee:'paid',st:'year',in:'both',
+ tip:'最便宜的維港遊，船程約 8 分鐘；帶小朋友坐下層看浪花已很開心。',tags:['渡輪','便宜','維港'],
+ url:'https://www.starferry.com.hk/'},
+{n:'挪亞方舟（馬灣）',cat:'park',dist:'荃灣',when:'全年',fee:'paid',st:'year',in:'both',
+ tip:'方舟花園、太陽館、職業體驗館，一日遊剛好；可順便在馬灣沙灘散步。',tags:['主題園區','馬灣','一日遊'],
+ url:'https://www.noahsark.com.hk/'},
+{n:'嘉道理農場暨植物園',cat:'park',dist:'大埔',when:'全年（部分日子休園，見官網）',fee:'paid',st:'year',in:'out',
+ tip:'農場動物、果園、林徑與觀鳥；適合常識科動植物觀察，記得帶水與帽子。',tags:['農場','動物','自然'],
+ url:'https://www.kfbg.org/'},
+{n:'香港濕地公園',cat:'park',dist:'元朗（天水圍）',when:'全年，逢星期二休',fee:'paid',st:'year',in:'both',
+ tip:'沼澤木棧道、觀鳥屋、鱷魚貝貝；12 月是候鳥季，帶望遠鏡收穫最大。',tags:['觀鳥','自然','親子'],
+ url:'https://www.wetlandpark.gov.hk/'},
+{n:'香港動植物公園',cat:'park',dist:'中西區',when:'全年',fee:'free',st:'year',in:'out',
+ tip:'免費看紅毛猩猩、狐獴與溫室；半日行程，配中環午飯。',tags:['免費','動物'],
+ map:'香港動植物公園'},
+{n:'香港公園（霍士傑溫室）',cat:'park',dist:'中西區',when:'全年',fee:'free',st:'year',in:'out',
+ tip:'金鐘站直達，溫室＋大型遊樂場＋人工湖，免費放電兩小時。',tags:['免費','遊樂場'],
+ map:'香港公園'},
+
+/* ---- 戶外自然 ---- */
+{n:'大棠楓香林（紅葉）',cat:'nature',dist:'元朗',when:'12 月中至 1 月最紅',fee:'free',st:'annual',in:'out',
+ tip:'由大棠山道巴士站步行至楓香林約 60 分鐘，假日有特別巴士線；平日去人少好多。',tags:['免費','紅葉','行山'],
+ map:'大棠楓香林'},
+{n:'城門水塘（菠蘿壩自然教育徑）',cat:'nature',dist:'荃灣',when:'全年',fee:'free',st:'year',in:'out',
+ tip:'平坦易行約 2 小時，沿途水塘倒影；有猴子，提醒小朋友不要拿食物出來。',tags:['免費','水塘','輕行'],
+ map:'城門水塘'},
+{n:'大埔海濱公園',cat:'nature',dist:'大埔',when:'全年',fee:'free',st:'year',in:'out',
+ tip:'大草坪、單車徑、回歸塔與昆蟲屋；野餐＋放風箏半日遊。',tags:['免費','野餐','單車'],
+ map:'大埔海濱公園'},
+{n:'西九文化區藝術公園',cat:'nature',dist:'油尖旺',when:'全年',fee:'free',st:'year',in:'out',
+ tip:'海濱大草坪可以放風箏、踢球；12/18 起同一草地有巨型充氣嘉年華。',tags:['免費','草坪','海濱'],
+ map:'西九文化區藝術公園'},
+{n:'單車遊：大圍 → 大尾篤',cat:'nature',dist:'沙田／大埔',when:'全年',fee:'paid',st:'year',in:'out',
+ tip:'約 20 公里，沿城門河與吐露港，小二至小四最熱門路線；租車費用另計，預留 3–4 小時。',tags:['單車','吐露港'],
+ map:'大圍 單車徑'},
+{n:'單車遊：天水圍 → 濕地公園',cat:'nature',dist:'元朗',when:'全年',fee:'paid',st:'year',in:'out',
+ tip:'路段平坦、車流少，適合第一次踩長途的小朋友；可中途入濕地公園。',tags:['單車','新手'],
+ map:'天水圍 單車徑'},
+{n:'南丫島家樂徑（榕樹灣 → 索罟灣）',cat:'nature',dist:'離島',when:'全年',fee:'paid',st:'year',in:'out',
+ tip:'約 2 小時，沿途有豆花店與洪聖爺灣沙灘；中環 4 號碼頭搭船。',tags:['離島','行山','渡輪'],
+ map:'南丫島 榕樹灣'},
+{n:'大澳漁村＋棚屋',cat:'nature',dist:'離島',when:'全年',fee:'paid',st:'year',in:'out',
+ tip:'坐小艇看棚屋與水道，順道買蝦醬、吃炭燒魷魚；一日行程。',tags:['離島','漁村','小艇'],
+ map:'大澳'},
+{n:'郊野公園露營（貝澳／西貢灣仔）',cat:'nature',dist:'離島／西貢',when:'全年（營地需預約）',fee:'free',st:'year',in:'out',
+ tip:'康文署營地免費但要網上抽籤；12 月夜裡約 12–15°C，帶夠睡袋與地墊。',tags:['免費','露營','體驗'],
+ map:'貝澳營地'},
+
+/* ---- 博物館 ---- */
+{n:'香港科學館',cat:'museum',dist:'油尖旺',when:'全年，逢星期四休館（公眾假期除外）',fee:'paid',st:'year',in:'in',
+ tip:'能量穿梭機、鏡子世界、兒童天地；小三可以玩足 3 小時，是最穩陣的雨天備案。',tags:['互動','科學','雨天'],
+ url:'https://hk.science.museum/'},
+{n:'香港太空館',cat:'museum',dist:'油尖旺',when:'全年',fee:'paid',st:'year',in:'in',
+ tip:'天象廳全天幕節目另需購票，準時入場；展覽廳有火箭與太空衣。',tags:['天文','天象廳','雨天'],
+ url:'https://hk.space.museum/'},
+{n:'香港歷史博物館',cat:'museum',dist:'油尖旺',when:'全年（休館日見官網）',fee:'free',st:'year',in:'in',
+ tip:'常設展免費，由史前到近代香港；12/11 起加開絲綢之路文化藝術展。',tags:['免費','歷史','常識'],
+ url:'https://hk.history.museum/'},
+{n:'香港文化博物館（兒童探知館）',cat:'museum',dist:'沙田',when:'全年（休館日見官網）',fee:'free',st:'year',in:'in',
+ tip:'兒童探知館可動手玩足兩小時，免費；配沙田公園一齊去。',tags:['免費','兒童館','沙田'],
+ url:'https://hk.heritage.museum/'},
+{n:'香港藝術館',cat:'museum',dist:'油尖旺',when:'全年（休館日見官網）',fee:'free',st:'year',in:'in',
+ tip:'免費看中國書畫與現代藝術，落地玻璃正對維港；逗留 1.5 小時剛好。',tags:['免費','藝術'],
+ url:'https://hk.art.museum/'},
+{n:'M+ 博物館',cat:'museum',dist:'油尖旺（西九）',when:'全年（逢星期一休）',fee:'free',st:'year',in:'in',
+ tip:'免費展廳已夠逛半天，天台花園看維港；適合視藝科靈感搜集。',tags:['免費','視藝','西九'],
+ url:'https://www.mplus.org.hk/'},
+{n:'香港故宮文化博物館',cat:'museum',dist:'油尖旺（西九）',when:'全年（逢星期二休）',fee:'paid',st:'year',in:'in',
+ tip:'宮廷文物＋互動展廳，預留 2–3 小時；可與 M+ 同日玩。',tags:['文物','西九','展覽'],
+ url:'https://www.hkpm.org.hk/'},
+{n:'香港海事博物館',cat:'museum',dist:'中西區',when:'全年',fee:'paid',st:'year',in:'in',
+ tip:'中環 8 號碼頭，船模型與港口故事；半小時至一小時。',tags:['海事','中環'],
+ url:'https://www.hkmaritimemuseum.org/'},
+{n:'香港鐵路博物館',cat:'museum',dist:'大埔',when:'全年（休館日見官網）',fee:'free',st:'year',in:'both',
+ tip:'古董火車卡可以上車參觀，免費；大埔墟站步行 5 分鐘。',tags:['免費','火車','大埔'],
+ map:'香港鐵路博物館'},
+{n:'三棟屋博物館',cat:'museum',dist:'荃灣',when:'全年（休館日見官網）',fee:'free',st:'year',in:'in',
+ tip:'免費客家圍屋，半小時看完，配荃灣午飯與商場打卡。',tags:['免費','古蹟'],
+ map:'三棟屋博物館'},
+{n:'羅屋民俗館',cat:'museum',dist:'東區',when:'全年（休館日見官網）',fee:'free',st:'year',in:'in',
+ tip:'柴灣站步行可到，免費看客家村屋；順道行柴灣公園。',tags:['免費','古蹟','港島東'],
+ map:'羅屋民俗館'},
+{n:'茶具文物館',cat:'museum',dist:'中西區',when:'全年（休館日見官網）',fee:'free',st:'year',in:'in',
+ tip:'在香港公園內，免費；看完直接在公園放電。',tags:['免費','香港公園'],
+ map:'茶具文物館'},
+{n:'屏山鄧族文物館暨文物徑',cat:'museum',dist:'元朗',when:'全年（休館日見官網）',fee:'free',st:'year',in:'out',
+ tip:'文物徑串起書室、祠堂與古廟，免費；適合常識科社區考察。',tags:['免費','文物徑','元朗'],
+ map:'屏山鄧族文物館'},
+{n:'香港海防博物館',cat:'museum',dist:'東區',when:'全年（休館日見官網）',fee:'free',st:'year',in:'both',
+ tip:'免費；砲台、隧道與海景，戶外部分多，好天去最舒服。',tags:['免費','歷史','戶外'],
+ map:'香港海防博物館'},
+{n:'孫中山紀念館（甘棠第）',cat:'museum',dist:'中西區',when:'全年（休館日見官網）',fee:'free',st:'year',in:'in',
+ tip:'免費；古蹟建築本身已值得看，中環半山扶手電梯順路。',tags:['免費','古蹟','中環'],
+ map:'孫中山紀念館'},
+{n:'大館（古蹟及藝術館）',cat:'museum',dist:'中西區',when:'全年',fee:'free',st:'year',in:'both',
+ tip:'免費入場；監獄遺跡＋當代藝術＋大草坪，中環站行 10 分鐘。',tags:['免費','藝術','古蹟'],
+ url:'https://www.taikwun.hk/'},
+{n:'香港非物質文化遺產中心',cat:'museum',dist:'荃灣',when:'全年（休館日見官網）',fee:'free',st:'year',in:'in',
+ tip:'免費；看紮作、舞火龍與傳統工藝，就在三棟屋旁邊。',tags:['免費','工藝'],
+ map:'香港非物質文化遺產中心'},
+
+/* ---- 室內放電 ---- */
+{n:'溜冰（又一城／Mega Ice／圓方）',cat:'indoor',dist:'全港',when:'全年',fee:'paid',st:'year',in:'in',
+ tip:'小三可上初班，1 小時已夠；自備手套，場內有租鞋。',tags:['溜冰','運動','雨天'],
+ map:'Mega Ice 溜冰場'},
+{n:'室內遊樂場（SuperPark／Kiztopia 等）',cat:'indoor',dist:'全港',when:'全年',fee:'paid',st:'year',in:'in',
+ tip:'落雨首選；記得穿防滑襪，假日預約時段。',tags:['遊樂場','放電','雨天'],
+ map:'SuperPark 香港'},
+{n:'攀石（抱石場）',cat:'indoor',dist:'全港',when:'全年',fee:'paid',st:'year',in:'in',
+ tip:'6 歲以上可玩抱石，有教練指導；第一次建議平日，人少教得細。',tags:['攀石','運動'],
+ map:'香港 抱石場'},
+{n:'彈床公園',cat:'indoor',dist:'全港',when:'全年',fee:'paid',st:'year',in:'in',
+ tip:'1 小時放電，回家一定好睡；帶水與後備衣服。',tags:['彈床','放電'],
+ map:'香港 彈床公園'},
+{n:'保齡球',cat:'indoor',dist:'全港',when:'全年',fee:'paid',st:'year',in:'in',
+ tip:'小三可用輕球加圍欄，照樣玩得成；一小時兩局左右。',tags:['保齡','運動'],
+ map:'香港 保齡球場'},
+{n:'公共圖書館（兒童圖書館）',cat:'indoor',dist:'全港',when:'全年',fee:'free',st:'year',in:'in',
+ tip:'免費借書、看繪本、參加故事時間；聖誕前後通常有主題書展。',tags:['免費','閱讀','雨天'],
+ url:'https://www.hkpl.gov.hk/'},
+{n:'康文署室內游泳池（暖水）',cat:'indoor',dist:'全港',when:'全年',fee:'paid',st:'year',in:'in',
+ tip:'12 月室內池水溫舒適；記得帶鎖、拖鞋與大毛巾。',tags:['游泳','運動'],
+ map:'康文署 室內游泳池'},
+{n:'香港中央圖書館玩具圖書館',cat:'indoor',dist:'灣仔',when:'全年（需網上預約）',fee:'free',st:'year',in:'in',
+ tip:'免費但要事先預約時段，每節約 45 分鐘；天后站步行 5 分鐘。',tags:['免費','玩具','預約'],
+ map:'香港中央圖書館'},
+
+/* ---- 免費社區 ---- */
+{n:'商場聖誕裝置（海港城、IFC、太古廣場、新城市廣場、YOHO、apm 等）',cat:'free',dist:'全港',when:'11 月中至 1 月初（主題待公布）',fee:'free',st:'annual',in:'in',
+ tip:'全部免費入場；各場主題每年不同，11 月下旬起留意商場公布，順路一次看兩三個。',tags:['免費','打卡','商場'],
+ map:'海港城'},
+{n:'屋苑／社區中心聖誕嘉年華',cat:'free',dist:'全港',when:'12 月（各區自訂）',fee:'free',st:'annual',in:'both',
+ tip:'多數免費，有攤位遊戲與表演；留意屋苑通告、區議員海報與社區中心網頁。',tags:['免費','社區'],
+ map:'香港 社區中心'},
+{n:'教堂聖誕活動（聖約翰座堂、聖安德烈堂等）',cat:'free',dist:'中西區／油尖旺',when:'12 月（場次見各堂公布）',fee:'free',st:'annual',in:'in',
+ tip:'子夜彌撒、報佳音、聖誕日崇拜，免費入場；帶小朋友感受氣氛，衣著整齊即可。',tags:['免費','音樂','文化'],
+ map:'聖約翰座堂'},
+{n:'康文署免費康樂設施（公園遊樂場、緩跑徑）',cat:'free',dist:'全港',when:'全年',fee:'free',st:'year',in:'out',
+ tip:'18 區都有，步行可到的公園就是最好的日常放電點；查康文署「康樂設施」頁找最近一個。',tags:['免費','遊樂場'],
+ url:'https://www.lcsd.gov.hk/'}
+];
+boot();
+</script>
+</body>
+</html>
